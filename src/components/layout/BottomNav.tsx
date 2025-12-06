@@ -14,7 +14,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   ];
 
   return (
-    <div className="bg-white border-t border-gray-100 px-6 pt-3 pb-6 flex justify-between items-end z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.02)]">
+    <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 px-6 pt-3 pb-6 flex justify-between items-end z-20 shadow-[0_-4px_20px_rgba(0,0,0,0.02)]">
       {tabs.map((tab) => {
         const isActive = activeTab === tab.id;
         return (

@@ -3,6 +3,8 @@ import type { Story } from './types';
 import { HomeScreen } from './screens/HomeScreen';
 import { PlayerScreen } from './screens/PlayerScreen';
 import { QuizScreen } from './screens/QuizScreen';
+import { CallScreen } from './screens/CallScreen';
+import { ProfileScreen } from './screens/ProfileScreen';
 import { BottomNav } from './components/layout/BottomNav';
 
 import type { Screen } from './types';
@@ -33,6 +35,8 @@ export default function App() {
           {screen === 'HOME' && <HomeScreen onPlay={navigateToPlayer} />}
           {screen === 'PLAYER' && selectedStory && <PlayerScreen story={selectedStory} onBack={goHome} />}
           {screen === 'QUIZ' && <QuizScreen onBack={goHome} />}
+          {screen === 'CALL' && <CallScreen />}
+          {screen === 'PROFILE' && <ProfileScreen />}
         </div>
         
         {/* Bottom Navigation */}
@@ -43,6 +47,8 @@ export default function App() {
               setActiveTab(tab);
               if (tab === 'Home') setScreen('HOME');
               if (tab === 'Learn') setScreen('QUIZ');
+              if (tab === 'Call') setScreen('CALL');
+              if (tab === 'Profile') setScreen('PROFILE');
             }} 
           />
         )}

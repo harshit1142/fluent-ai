@@ -1,4 +1,4 @@
-export type Screen = 'HOME' | 'PLAYER' | 'QUIZ';
+export type Screen = 'HOME' | 'PLAYER' | 'QUIZ' | 'CALL' | 'PROFILE';
 
 export interface Story {
   id: string;
